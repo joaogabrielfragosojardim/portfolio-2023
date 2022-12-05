@@ -1,42 +1,64 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, SlideFade, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { whatsappLink } from "../constants/contact";
+import { InView } from "react-intersection-observer";
+import { animations } from "../constants/animations";
 
 export const Start = () => (
-  <Flex p="80px 100px" justify="space-between" align="center">
-    <Box>
-      <Text fontSize="48px" fontWeight="bold">
-        João Fragoso
-      </Text>
-      <Text
-        fontSize="24px"
-        maxW="720px"
-        lineHeight="45px"
-        mt="22px"
-        textAlign="justify"
-      >
-        Desenvolvedor <b>React & Node</b> com{" "}
-        <b>mais de um ano de experiência</b> no mercado de desenvolvimento web /
-        mobile.
-      </Text>
-      <Link href={whatsappLink} target="_blank">
-        <Button
-          fontSize="24px"
-          fontWeight="normal"
-          bg="transparent"
-          _hover={{ bg: "transparent" }}
-          mt="82px"
-          border="solid 1px"
-          borderColor="black"
-          p="32px 56px"
-          borderRadius="70px"
+  <InView triggerOnce={true}>
+    {({ inView, ref }) => (
+      <SlideFade in={inView} transition={{ enter: { duration: animations } }}>
+        <Flex
+          p={{ base: "1.87rem 1.25rem", xl: "5rem 6.25rem" }}
+          justify="space-between"
+          align="center"
+          flexDir={{ base: "column-reverse", xl: "row" }}
+          gap="4rem"
+          ref={ref}
         >
-          Vamos conversar!
-        </Button>
-      </Link>
-    </Box>
-    <Box w="393px" h="393px">
-      <Image src="/start.webp" alt="my memoji" boxSize="100%" />
-    </Box>
-  </Flex>
+          <Box>
+            <Text
+              fontSize={{ base: "2em", md: "3rem" }}
+              fontWeight="bold"
+              id="start"
+            >
+              João Fragoso
+            </Text>
+            <Text
+              fontSize={{ base: "1.12rem", md: "1.5rem" }}
+              maxW="45rem"
+              lineHeight="2.81rem"
+              mt="1.37rem"
+              textAlign="justify"
+            >
+              Desenvolvedor <b>React & Node</b> com{" "}
+              <b>mais de um ano de experiência</b> no mercado de desenvolvimento
+              web / mobile.
+            </Text>
+            <Link href={whatsappLink} target="_blank">
+              <Button
+                fontSize={{ base: "1.12rem", md: "1.5rem" }}
+                fontWeight="normal"
+                bg="transparent"
+                _hover={{ bg: "transparent" }}
+                mt="5.12rem"
+                border="solid 0.06rem"
+                borderColor="black"
+                p="2rem 3.5rem"
+                borderRadius="4.37rem"
+              >
+                Vamos conversar!
+              </Button>
+            </Link>
+          </Box>
+          <Box
+            w={{ base: "18rem", md: "24.56rem" }}
+            h={{ base: "18rem", md: "24.56rem" }}
+          >
+            <Image src="/start.webp" alt="my memoji" boxSize="100%" />
+          </Box>
+        </Flex>
+      </SlideFade>
+    )}
+  </InView>
 );

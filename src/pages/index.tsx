@@ -9,7 +9,7 @@ import { Start } from "../components/Start";
 
 export default function Home() {
   return (
-    <Box maxW="1640px" margin="auto">
+    <Box maxW="102.5rem" margin="auto">
       <Header />
       <Start />
       <About />

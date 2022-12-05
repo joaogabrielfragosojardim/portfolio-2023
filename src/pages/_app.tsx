@@ -1,16 +1,11 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { Roboto } from "@next/font/google";
 import { AppProps } from "next/app";
-
-const roboto = Roboto({
-  weight: ["400", "700"],
-  style: "normal",
-  subsets: ["latin"],
-});
+import { roboto } from "../styles/fonts";
+import { theme } from "../styles/theme";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider resetCSS>
+    <ChakraProvider resetCSS theme={theme}>
       <main className={roboto.className}>
         <Component {...pageProps} />
       </main>

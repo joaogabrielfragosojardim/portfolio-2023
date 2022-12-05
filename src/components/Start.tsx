@@ -43,7 +43,7 @@ export const Start = () => (
                 _hover={{ bg: "transparent" }}
                 mt="5.12rem"
                 border="solid 0.06rem"
-                borderColor="black"
+                borderColor="primary"
                 p="2rem 3.5rem"
                 borderRadius="4.37rem"
               >

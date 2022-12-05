@@ -6,31 +6,38 @@ import {
   DrawerOverlay,
   Flex,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import { Link as AnimateLink } from "react-scroll";
 import { email } from "../constants/contact";
 import { headerMenu } from "../constants/headerMenu";
 import { Fade as Hamburger } from "hamburger-react";
 import { useMemo, useState } from "react";
+import { BsSun, BsMoon } from "react-icons/bs";
 
 export const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const { toggleColorMode, colorMode } = useColorMode();
 
-  const toggleByPrev = useMemo(() => {
+  const toggleMenuByPrev = useMemo(() => {
     return () => {
       setToggleMenu((prev) => !prev);
     };
   }, []);
 
   return (
-    <>
+    <Box
+      w="100%"
+      pos="sticky"
+      top="0rem"
+      bg="radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0)) 100%"
+      backdropFilter="blur(1.25rem)"
+      zIndex="10"
+    >
       <Box
+        maxW="102.5rem"
+        margin="auto"
         p={{ base: "1.87rem 1.25rem", xl: "2rem 6.25rem" }}
-        pos="sticky"
-        top="0rem"
-        bg="linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))"
-        backdropFilter="blur(1.25rem)"
-        zIndex="10"
       >
         <Flex
           justify={{ base: "flex-start", md: "center", xl: "space-between" }}
@@ -60,14 +67,31 @@ export const Header = () => {
               </Box>
             ))}
           </Flex>
-          <Box display={{ base: "inline", md: "none" }} onClick={toggleByPrev}>
+          <Box
+            display={{ base: "inline", md: "none" }}
+            onClick={toggleMenuByPrev}
+          >
             <Hamburger toggled={toggleMenu} />
           </Box>
-          <Text display={{ base: "none", xl: "inline-block" }}>{email}</Text>
+          <Flex
+            fontSize="1.6rem"
+            onClick={toggleColorMode}
+            cursor="pointer"
+            align={"center"}
+            gap="4rem"
+          >
+            <Text
+              fontSize="1.12rem"
+              display={{ base: "none", xl: "inline-block" }}
+            >
+              {email}
+            </Text>
+            {colorMode === "dark" ? <BsMoon /> : <BsSun />}
+          </Flex>
         </Flex>
       </Box>
       <Drawer
-        onClose={toggleByPrev}
+        onClose={toggleMenuByPrev}
         isOpen={toggleMenu}
         size="xs"
         placement="left"
@@ -77,7 +101,7 @@ export const Header = () => {
           <Box ml="auto" mt="2rem" mr="1.25rem">
             <Box
               display={{ base: "inline", md: "none" }}
-              onClick={toggleByPrev}
+              onClick={toggleMenuByPrev}
             >
               <Hamburger toggled={toggleMenu} />
             </Box>
@@ -95,7 +119,7 @@ export const Header = () => {
                     offset={menuItem.offset}
                     smooth
                     duration={500}
-                    onClick={toggleByPrev}
+                    onClick={toggleMenuByPrev}
                   >
                     {menuItem.content}
                   </AnimateLink>
@@ -105,6 +129,6 @@ export const Header = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </>
+    </Box>
   );
 };

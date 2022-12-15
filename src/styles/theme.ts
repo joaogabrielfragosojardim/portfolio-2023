@@ -7,12 +7,7 @@ export const theme = extendTheme({
       body: {
         bg: mode("white", "black")(props),
         color: mode("black", "white")(props),
-        transitionProperty: "all",
-        transitionDuration: "ultra-slow",
       },
     }),
-    config: {
-      disableTransitionOnChange: false,
-    },
   },
 });

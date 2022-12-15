@@ -7,6 +7,7 @@ import {
   Flex,
   Text,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Link as AnimateLink } from "react-scroll";
 import { email } from "../constants/contact";
@@ -40,15 +41,15 @@ export const Header = () => {
         p={{ base: "1.87rem 1.25rem", xl: "2rem 6.25rem" }}
       >
         <Flex
-          justify={{ base: "flex-start", md: "center", xl: "space-between" }}
+          justify={{ base: "flex-start", xl: "space-between" }}
           fontSize="1.12rem"
         >
           <Flex
             gap="2rem"
-            display={{ base: "none", md: "flex" }}
+            display={{ base: "none", xl: "flex" }}
             w={{ base: "100%", xl: "unset" }}
             maxW={{ base: "45rem", xl: "unset" }}
-            justify={{ base: "space-between", xl: "unset" }}
+            justify={{ base: "flex-start", xl: "unset" }}
           >
             {headerMenu.map((menuItem, index) => (
               <Box
@@ -68,8 +69,11 @@ export const Header = () => {
             ))}
           </Flex>
           <Box
-            display={{ base: "inline", md: "none" }}
+            display={{ base: "inline", xl: "none" }}
             onClick={toggleMenuByPrev}
+            w="100%"
+            maxW="41.56rem"
+            m="auto"
           >
             <Hamburger toggled={toggleMenu} />
           </Box>
@@ -86,7 +90,9 @@ export const Header = () => {
             >
               {email}
             </Text>
-            {colorMode === "dark" ? <BsMoon /> : <BsSun />}
+            <Box display={{ base: "none", xl: "inline" }}>
+              {colorMode === "dark" ? <BsMoon /> : <BsSun />}
+            </Box>
           </Flex>
         </Flex>
       </Box>
@@ -97,7 +103,10 @@ export const Header = () => {
         placement="left"
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent
+          bg="radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0)) 100%"
+          backdropFilter="blur(1.25rem)"
+        >
           <Box ml="auto" mt="2rem" mr="1.25rem">
             <Box
               display={{ base: "inline", md: "none" }}
@@ -125,6 +134,9 @@ export const Header = () => {
                   </AnimateLink>
                 </Box>
               ))}
+              <Box fontSize="1.6rem" onClick={toggleColorMode} mt="2rem">
+                {colorMode === "dark" ? <BsMoon /> : <BsSun />}
+              </Box>
             </Flex>
           </DrawerBody>
         </DrawerContent>

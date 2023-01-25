@@ -142,7 +142,7 @@ export const Experience = () => {
                 </SlideFade>
               )}
             </InView>
-            {indexExp + 1 !== experience.projects.length && (
+            {indexExp + 1 === experience.projects.length && (
               <InView triggerOnce={true}>
                 {({ inView, ref }) => (
                   <SlideFade

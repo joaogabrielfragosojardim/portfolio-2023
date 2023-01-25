@@ -1,4 +1,23 @@
 export const experience = [
+      {
+    jobName: "Alterdata",
+    role: "Desenvolvedor Fullstack Pleno",
+    date: "Jan/2023 - Atualmente",
+    src: "/experience/Alterdata.png",
+    projects: [
+      "Atuando no desenvolvimento do Karoo",
+    ],
+  },
+    {
+    jobName: "Supera Inovação e Tecnologia",
+    role: "Desenvolvedor Pleno",
+    date: "Mai/2022 - Dez/2022",
+    src: "/experience/supera.jpg",
+    projects: [
+      "Bristom (Projeto): Responsável por organizar o projeto utilizando Next.js, fui responsável por criar o sistema de autenticação da aplicação utilizando next auth. Também fui responsável por decidir as bibliotecas que seriam utilizados no mesmo ao lado de um desenvolvedor sênior, usamos Redux Tooklit, Chakra UI, Leaflet e i18n. No backend sou responsável por refatorar métodos já existentes e criar novas rotas",
+      "Senai (Projeto): Responsável pela implementação de todo o front end do Senai. criação de páginas, componentes, testes unitários e adequações a regras de negócio",
+    ],
+  },
   {
     jobName: "Supera Inovação e Tecnologia",
     role: "Desenvolvedor Junior",
@@ -11,14 +30,5 @@ export const experience = [
       "Portal da Transparência (Projeto): Responsável por implementar regras de negócio, criar componentes,",
     ],
   },
-  {
-    jobName: "Supera Inovação e Tecnologia",
-    role: "Desenvolvedor Pleno",
-    date: "Mai/2022 - Atualmente",
-    src: "/experience/supera.jpg",
-    projects: [
-      "Bristom (Projeto): Responsável por organizar o projeto utilizando Next.js, fui responsável por criar o sistema de autenticação da aplicação utilizando next auth. Também fui responsável por decidir as bibliotecas que seriam utilizados no mesmo ao lado de um desenvolvedor sênior, usamos Redux Tooklit, Chakra UI, Leaflet e i18n. No backend sou responsável por refatorar métodos já existentes e criar novas rotas",
-      "Senai (Projeto): Responsável pela implementação de todo o front end do Senai. criação de páginas, componentes, testes unitários e adequações a regras de negócio",
-    ],
-  },
+
 ];

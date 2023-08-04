@@ -37,7 +37,7 @@ export const About = () => (
               textAlign="justify"
             >
               Olá! me chamo <b>João Gabriel Fragoso Jardim</b>, sou brasileiro,
-              tenho 19 anos, estudo Ciências da Computação e atuo como{" "}
+              tenho 20 anos, estudo Ciências da Computação e atuo como{" "}
               <b>Desenvolvedor Fullstack</b> <b>há mais de um ano</b> utilizando{" "}
               <b>React e Node.</b>
             </Text>

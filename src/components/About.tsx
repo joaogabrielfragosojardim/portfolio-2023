@@ -27,7 +27,7 @@ export const About = () => (
               mt={{ base: "2rem", xl: "unset" }}
               id="about"
             >
-              Sobre
+              About
             </Text>
             <Text
               fontSize={{ base: "1.12rem", md: "1.5rem" }}
@@ -36,10 +36,10 @@ export const About = () => (
               mt="1.37rem"
               textAlign="justify"
             >
-              Olá! me chamo <b>João Gabriel Fragoso Jardim</b>, sou brasileiro,
-              tenho 20 anos, estudo Ciências da Computação e atuo como{" "}
-              <b>Desenvolvedor Fullstack</b> <b>há mais de um ano</b> utilizando{" "}
-              <b>React e Node.</b>
+              Hello! My name is <b>João Gabriel Fragoso Jardim</b>, I&apos;m
+              Brazilian, 20 years old, currently studying Computer Science, and
+              I&apos;ve been working as a <b>Fullstack Developer</b> for more
+              than two years, using <b>React and Node</b>.
             </Text>
           </Box>
         </Flex>

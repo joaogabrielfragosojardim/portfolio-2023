@@ -13,7 +13,7 @@ export const Contact = () => (
             fontWeight="bold"
             id="contacts"
           >
-            Contatos
+            Contacts
           </Text>
           <Flex
             flexDir={{ base: "column-reverse", xl: "row" }}
@@ -29,7 +29,7 @@ export const Contact = () => (
               gap="1rem"
             >
               <Flex gap="2rem" justify="space-between">
-                <Text>Telefone (whatsapp):</Text>
+                <Text>Phone (whatsapp):</Text>
                 <Link href={whatsappLink} fontWeight="bold">
                   {number}
                 </Link>
@@ -37,7 +37,7 @@ export const Contact = () => (
               <Flex gap="2rem" justify="space-between">
                 <Text>Linkedin:</Text>
                 <Link href={linkedin} fontWeight="bold">
-                  Clique aqui
+                  Click Here
                 </Link>
               </Flex>
               <Flex gap="2rem" justify="space-between">

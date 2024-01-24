@@ -22,7 +22,7 @@ export const Start = () => (
               fontWeight="bold"
               id="start"
             >
-              João Fragoso
+              João Jardim
             </Text>
             <Text
               fontSize={{ base: "1.12rem", md: "1.5rem" }}
@@ -31,9 +31,9 @@ export const Start = () => (
               mt="1.37rem"
               textAlign="justify"
             >
-              Desenvolvedor <b>React & Node</b> com{" "}
-              <b>mais de um ano de experiência</b> no mercado de desenvolvimento
-              web / mobile.
+              <b>React & Node Developer</b> with{" "}
+              <b>more than two years of experience</b> in the web/mobile
+              development market.
             </Text>
             <Link href={whatsappLink} target="_blank">
               <Button
@@ -47,7 +47,7 @@ export const Start = () => (
                 p="2rem 3.5rem"
                 borderRadius="4.37rem"
               >
-                Vamos conversar!
+                {"Let's talk!"}
               </Button>
             </Link>
           </Box>

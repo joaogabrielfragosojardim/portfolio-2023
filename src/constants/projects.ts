@@ -1,17 +1,18 @@
 export const projects = [
   {
-    src: "/projects/semana-modafoca.png",
-    title: "LP de lançamento",
+    src: "/projects/prime-school.jpg",
+    title: "Prime School",
     about:
-      "Landing page de lançamento para o curso let's bora estrutura (a página não está 100% pois o curso está encerrado)",
-    bg: "orange",
-    link: "https://lpsonwe-altoqi.vercel.app/semana-modafoca",
-    rounded: false,
+      "institutional website, and an adm dashboard with cruds of schools, students and etc, builded with Next.js, Prisma, Postgres and Tailwindcss, used Resend do send emails and Supabase as a file bucket",
+    bg: "#5380d5",
+    link: "https://escolaprimepe.com.br",
+    rounded: true,
   },
   {
     src: "/projects/onwe.jpg",
     title: "On.we",
-    about: "Site institucional da On.we",
+    about:
+      "On.we institutional webiste with Next.js, Prisma, Postgres and Tailwindcss, creation of a blog and an adm panel",
     bg: "purple",
     link: "https://onwe.com.br/",
     rounded: true,

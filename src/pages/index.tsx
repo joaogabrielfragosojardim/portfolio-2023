@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfólio João</title>
-        <meta content="Portfólio João" property="og:title" />
+        <title>João&apos;s Portfolio</title>
+        <meta content="João's Portfolio" property="og:title" />
         <meta
-          content="Desenvolvedor React & Node com mais de um ano de experiência no mercado de desenvolvimento web / mobile."
+          content="React & Node Developer with over two years of experience in the web/mobile development market."
           property="og:description"
         />
         <meta property="og:type" content="website" />

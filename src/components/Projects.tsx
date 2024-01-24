@@ -29,7 +29,7 @@ export const Projects = () => {
               mt="5rem"
               id="projects"
             >
-              Projetos
+              Projects
             </Text>
           </SlideFade>
         )}

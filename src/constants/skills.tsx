@@ -15,12 +15,12 @@ export const skills = [
     other: ["Redux", "React Native", "Hooks"],
   },
   {
-    name: "Next",
+    name: "Next.js",
     icon: <TbBrandNextjs />,
     other: ["NextAuth", "NextSEO", "Vercel"],
   },
   {
-    name: "Node",
+    name: "Node.js",
     icon: <FaNodeJs />,
     other: ["Prisma", "Nest", "RestAPI"],
   },
@@ -30,7 +30,7 @@ export const skills = [
     other: ["WatermelonDB", "Android", "IOS"],
   },
   {
-    name: "Bancos de dados",
+    name: "Databases",
     icon: <TbDatabase />,
     other: ["SQL", "Postgress", "MongoDB"],
   },
@@ -42,27 +42,27 @@ export const skills = [
   {
     name: "CSS",
     icon: <TbBrandCss3 />,
-    other: ["Bootstrap", "Chakra ui", "Material ui"],
+    other: ["Tailwindcss", "Chakra ui", "Material ui"],
   },
   {
     name: "JavaScript",
     icon: <TbBrandJavascript />,
-    other: ["JS Moderno", "Classes", "Métodos"],
+    other: ["Modern js", "Classess", "Methods"],
   },
   {
     name: "TypeScript",
     icon: <SiTypescript />,
-    other: ["Tipagens", "Funções", "Métodos"],
+    other: ["Types", "Functions", "Methods"],
   },
   {
-    name: "Testes unitários",
+    name: "Unit Tests",
     icon: <SiJest />,
-    other: ["Componentes", "Teste de API", "Storybook"],
+    other: ["Compnents", "API tests", "Storybook"],
   },
   {
     name: "API",
     icon: <SiExercism />,
-    other: ["CRUD", "Consumo", "Criação"],
+    other: ["CRUD", "Consuming", "Creation"],
   },
   {
     name: "GraphQL",

@@ -27,7 +27,7 @@ export const Experience = () => {
               fontWeight="bold"
               id="experience"
             >
-              Experiência
+              Experience
             </Text>
           </SlideFade>
         )}
@@ -114,9 +114,9 @@ export const Experience = () => {
                       transition={{ enter: { duration: animations } }}
                     >
                       <Box ref={ref}>
-                        <ListItem>
+                        <Box>
                           <Text>{project}</Text>
-                        </ListItem>
+                        </Box>
                         {index + 1 !== experience.projects.length && <br />}
                       </Box>
                     </SlideFade>
@@ -124,24 +124,6 @@ export const Experience = () => {
                 </InView>
               ))}
             </List>
-            <InView triggerOnce={true}>
-              {({ inView, ref }) => (
-                <SlideFade
-                  in={inView}
-                  transition={{ enter: { duration: animations } }}
-                >
-                  <Text
-                    ref={ref}
-                    fontSize={{ base: "1rem", md: "1.12rem" }}
-                    color="gray"
-                    mt="2rem"
-                  >
-                    Obs: Projetos não divulgados por motivos de privacidade
-                    empresárial
-                  </Text>
-                </SlideFade>
-              )}
-            </InView>
             {indexExp + 1 === experience.projects.length && (
               <InView triggerOnce={true}>
                 {({ inView, ref }) => (
